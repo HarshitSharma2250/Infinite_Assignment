@@ -15,7 +15,7 @@
 
 ## Authors
 
-- Harshit Sharma - Initial work, design, and development [@Harshit Sharma](https://infinite2.netlify.app/)
+- Harshit Sharma - Initial work, design, and development [@Harshit Sharma](https://github.com/HarshitSharma2250)
 
 ## Color Reference
 
