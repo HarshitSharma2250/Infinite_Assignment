@@ -105,32 +105,38 @@ export function OverviewChart() {
       borderRadius="md"
       boxShadow="base"
       w="100%"
-      mt={3}
+      mt={1}
     >
       {/* Header */}
-      <Flex justifyContent="space-between" alignItems="center" mb={4}>
-        <Heading as="h3" size={{ base: "sm", md: "md" }}>
+      <Flex justifyContent="space-between" alignItems="center" mb={2}>
+        <Heading as="h1" size={{ base: "14px", md: "16px",lg:"17px",xl:"18px"}}>
           Overview
         </Heading>
         <Link href="#" color="purple.500" fontWeight="medium">
           <Flex alignItems="center">
             <IoIosArrowDown style={{ marginRight: "4px" }} />
-            <Text fontSize={{ base: "sm", md: "md" }}>Download Report</Text>
+            <Text>Download Report</Text>
           </Flex>
         </Link>
       </Flex>
 
       {/* Tabs */}
-      <ButtonGroup size="sm" isAttached variant="outline" mb={4}>
+      <ButtonGroup size="sm" isAttached variant="outline" mb={2}>
         <Button
           colorScheme={selectedTab === "Monthly" ? "purple" : "gray"}
           onClick={() => setSelectedTab("Monthly")}
+          ontSize="12px" 
+        padding="0.5rem" 
+        height="1.5rem"
         >
           Monthly
         </Button>
         <Button
           colorScheme={selectedTab === "Yearly" ? "purple" : "gray"}
           onClick={() => setSelectedTab("Yearly")}
+          ontSize="12px" 
+          padding="0.5rem" 
+          height="1.5rem"
         >
           Yearly
         </Button>
@@ -139,7 +145,7 @@ export function OverviewChart() {
       {/* Chart */}
     <Grid gridTemplateColumns={'50px 1fr'} gap={["2px","7px","5px","7px"]}>
     <Flex  gap={'6px'} mb={['40px','27px','27px','27px']}>
-      <Flex flexDirection={'column'} justifyContent={'space-between'} alignItems={'flex-end'} fontSize={["12px","14px","16px",]}>
+      <Flex flexDirection={'column'} justifyContent={'space-between'} alignItems={'flex-end'} fontSize={["12px","14px","14px",]}>
        <Text color={'gray.500'}>$1500</Text>
         <Text color={'gray.500'}>$1000</Text>
         <Text color={'gray.500'}>$500</Text>

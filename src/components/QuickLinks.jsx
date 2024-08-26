@@ -36,14 +36,19 @@ export const QuickLinks = () => {
         lg: "auto 250px",
         xl: "auto 350px",
       }}
-      p={3}
+      pt={3}
+      pr={3}
+      pl={3}
       gap={8}
     >
       <Box>
-        <Box boxShadow="base" rounded="md" bg={"white"} p={3}>
+          {/*-------------- menu items quick links ------------ */}
+        <Box boxShadow="base" rounded="md" bg={"white"} p={3} >
           <Text fontWeight={600} color={'gray.700'}>Quick Links</Text>
-          {/* menu items */}
-          <Flex wrap="wrap" gap={4} p={3} bg="white">
+
+
+
+          <Flex wrap="wrap"  p={2} py={1} bg="white">
             {menuItems.map((item, index) => (
               <Box
                 key={index}
@@ -51,16 +56,19 @@ export const QuickLinks = () => {
                 flexDirection="column"
                 alignItems="center"
                 justifyContent="center"
-                w="90px"
-                h="75px"
-                p={5}
+                w="75px"
+                h="50px"
                 bg={'gray.50'}
                 borderRadius="md"
                 boxShadow="sm"
+                marginRight={5} marginBottom={2}
                 _hover={{ boxShadow: "md", cursor: "pointer" }}
               >
-                <Icon as={item.icon} boxSize={5} color="gray.600" />
-                <Text mt={1} fontSize="14px" color="gray.700" fontWeight={600}>
+                <Icon as={item.icon} boxSize={4} color="gray.600" />
+                <Text mt={1} fontSize="13px" 
+               
+                color="gray.700"
+                 fontWeight={600}>
                   {item.label}
                 </Text>
               </Box>
@@ -69,7 +77,7 @@ export const QuickLinks = () => {
         </Box>
 
         {/* chart */}
-        <OverviewChart />
+        <OverviewChart/>
       </Box>
 
       <Master_open/>

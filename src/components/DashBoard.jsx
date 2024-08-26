@@ -65,7 +65,7 @@ export const DashBoard = () => {
         {/* Sidebar */}
         <Box 
           bg="purple.400"
-          h="120%"
+          h="100%"
           display={["none", "none", "none", "flex"]}
           color={"#fff"}
           minW={"180px"}
@@ -89,7 +89,7 @@ export const DashBoard = () => {
               }}
             >
               {link.icon}
-              <Text my={2} textAlign="left" ml={3}>
+              <Text my={1} textAlign="left" ml={3}>
                 {link.text}
               </Text>
             </Flex>
@@ -110,7 +110,7 @@ export const DashBoard = () => {
               }}
             >
               {link.icon}
-              <Text my={2} textAlign="left" ml={3}>
+              <Text my={1} textAlign="left" ml={3} >
                 {link.text}
               </Text>
             </Flex>
@@ -121,8 +121,8 @@ export const DashBoard = () => {
   <LuUser/>
   </Box>
   <Box>
-    <Text>Syam Shakur</Text>
-    <Text>syam01.shankur@m....</Text>
+    <Text >Syam Shakur</Text>
+    <Text >syam01.shankur@m....</Text>
   </Box>
 
           </Flex>
@@ -135,7 +135,7 @@ export const DashBoard = () => {
           {/* Header */}
 
           <Flex
-            h={["100px", "100px", 16, 16]}
+            h={["90px", "90px", 12, 12]}
             w={"100%"}
             justifyContent={[
               "space-around",
@@ -156,7 +156,7 @@ export const DashBoard = () => {
                 display={["inline-flex", "inline-flex", "inline-flex", "none"]}
                 onClick={isOpen ? onClose : onOpen}
               />
-              <Box ml={{ base: 2, md: 0 }} fontWeight={700} opacity={".7"}>
+              <Box ml={{ base: 2, md: 0 }} fontWeight={700} opacity={".7"} fontSize={["10px","15px","15px","15px"]}>
                 Dashboard
               </Box>
             </Flex>
@@ -166,20 +166,23 @@ export const DashBoard = () => {
               w={{ base: "100%", md: "30%" }}
               display={"flex"}
               alignItems={"center"}
+              h={'30px'}
             >
               <InputGroup mr={3}>
-                <InputLeftElement pointerEvents="none">
-                  <IoSearchSharp color="gray.300" />
+                <InputLeftElement pointerEvents="none" >
+                  <IoSearchSharp color="gray.300" style={{marginBottom:'6px'}} />
                 </InputLeftElement>
                 <Input
                   type="text"
                   placeholder="search..."
                   w={"100%"}
                   color="black"
+                  h={'30px'}
+                  fontSize={'15px'}
                 />
               </InputGroup>
               <Box display={["none", "none", "block", "block"]}>
-                <IoMdNotificationsOutline fontSize={"30px"} />
+                <IoMdNotificationsOutline fontSize={"20px"} />
               </Box>
             </Box>
           </Flex>
@@ -196,7 +199,7 @@ export const DashBoard = () => {
           <DrawerContent maxWidth="250px" width="180px">
             <DrawerCloseButton />
             <DrawerBody bg="purple.300" p={0}>
-<Flex flexDirection={'column'} justifyContent={'space-between'}height={'100%'}>
+<Flex flexDirection={'column'} justifyContent={'space-between'} height={'100%'}>
 <Box>
           <Logo/>
           {Links.map((link) => (
